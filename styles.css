@@ -1,0 +1,307 @@
+/* 풍무푸르지오 리버프론트 - 원페이지 롱스크롤 분양 랜딩페이지 스타일시트 */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;600;700;800;900&family=Montserrat:wght@400;500;600;700;800;900&display=swap');
+
+:root {
+  /* Brand Identity & Color System */
+  --prugio-green: #004225;          /* Header: 푸르지오 브리티시 그린 */
+  --prugio-green-dark: #002e19;     /* 브리티시 그린 딥 톤 */
+  --prugio-green-light: #0a5c36;    /* 브리티시 그린 호버/서브 톤 */
+  --hero-beige: #F5F2EB;            /* Hero Section: 소프트 베이지 */
+  --hero-beige-border: #E5DEC9;
+  --champagne-gold: #C5A880;        /* 액센트: 샴페인 골드 */
+  --champagne-gold-light: #DFC8A8;
+  --champagne-gold-dark: #A68960;
+  --body-bg: #FFFFFF;               /* Body Background: 퓨어 화이트 */
+  --body-text: #1F2937;             /* 본문 텍스트: 가독성 높은 차콜 */
+  --slate-tone: #334155;            /* 슬레이트 서브 톤 */
+  --slate-dark: #0F172A;
+  --footer-bg: #2C2C2C;             /* Footer: 딥 차콜 블랙 60% 톤 (#2C2C2C) */
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 90px;
+}
+
+body {
+  font-family: 'Noto Sans KR', -apple-system, BlinkMacSystemFont, 'Malgun Gothic', sans-serif;
+  background-color: var(--body-bg);
+  color: var(--body-text);
+  overflow-x: hidden;
+  line-height: 1.6;
+}
+
+.font-montserrat {
+  font-family: 'Montserrat', 'Noto Sans KR', sans-serif;
+}
+
+/* Sticky GNB Header - Prugio British Green (#004225) */
+.header-prugio {
+  background-color: var(--prugio-green);
+  border-bottom: 1px solid rgba(197, 168, 128, 0.28);
+  transition: box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.header-prugio.scrolled {
+  background-color: rgba(0, 66, 37, 0.97);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 12px 30px -10px rgba(0, 0, 0, 0.35);
+}
+
+/* GNB Anchor Links */
+.nav-anchor {
+  position: relative;
+  color: rgba(255, 255, 255, 0.88);
+  transition: color 0.25s ease, background-color 0.25s ease;
+}
+
+.nav-anchor:hover {
+  color: #FFFFFF;
+}
+
+.nav-anchor::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0%;
+  height: 3px;
+  background: var(--champagne-gold);
+  border-radius: 2px;
+  transition: width 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.nav-anchor:hover::after,
+.nav-anchor.active::after {
+  width: 75%;
+}
+
+.nav-anchor.active {
+  color: var(--champagne-gold-light);
+  font-weight: 700;
+  background-color: rgba(255, 255, 255, 0.08);
+}
+
+/* Hero Section - Bright Luxurious Panorama with Ambient Glow & Artistic Depth */
+.hero-section {
+  position: relative;
+  background-color: #F8F6F0;
+  background-image:
+    linear-gradient(180deg, rgba(255, 253, 248, 0.55) 0%, rgba(255, 255, 255, 0.25) 30%, rgba(248, 246, 240, 0.65) 80%, #FFFFFF 100%),
+    radial-gradient(ellipse at 20% 25%, rgba(255, 250, 235, 0.80) 0%, transparent 65%),
+    radial-gradient(ellipse at 85% 65%, rgba(224, 242, 254, 0.55) 0%, transparent 60%),
+    url('images/panoramic_2.jpg');
+  background-size: cover;
+  background-position: center 36%;
+  background-repeat: no-repeat;
+}
+
+/* Bright Crystal Frost Glass Panel (우측 VIP 관심고객 등록 카드) */
+.hero-bright-glass {
+  background: rgba(255, 255, 255, 0.94);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1.5px solid rgba(197, 168, 128, 0.65);
+  box-shadow: 
+    0 25px 60px -15px rgba(15, 23, 42, 0.18),
+    0 10px 30px -5px rgba(197, 168, 128, 0.25),
+    inset 0 1px 2px rgba(255, 255, 255, 0.95);
+}
+
+/* Bright Stat Card (좌측 핵심 요약 카드들) */
+.hero-stat-card-bright {
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(197, 168, 128, 0.55);
+  box-shadow: 0 12px 28px -6px rgba(15, 23, 42, 0.08), 0 4px 10px rgba(197, 168, 128, 0.15);
+  transition: all 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.hero-stat-card-bright:hover {
+  transform: translateY(-3px);
+  background: rgba(255, 255, 255, 0.98);
+  border-color: rgba(197, 168, 128, 0.9);
+  box-shadow: 0 18px 36px -8px rgba(197, 168, 128, 0.35);
+}
+
+/* Ambient Glowing Orbs behind the background */
+.hero-ambient-orb-1 {
+  position: absolute;
+  top: -8%;
+  left: 5%;
+  width: 540px;
+  height: 540px;
+  background: radial-gradient(circle, rgba(254, 240, 138, 0.40) 0%, rgba(197, 168, 128, 0.22) 50%, transparent 70%);
+  filter: blur(65px);
+  pointer-events-none;
+  animation: pulse-glow 9s ease-in-out infinite alternate;
+}
+
+.hero-ambient-orb-2 {
+  position: absolute;
+  bottom: -5%;
+  right: 5%;
+  width: 620px;
+  height: 620px;
+  background: radial-gradient(circle, rgba(56, 189, 248, 0.25) 0%, rgba(197, 168, 128, 0.20) 50%, transparent 70%);
+  filter: blur(75px);
+  pointer-events-none;
+}
+
+@keyframes pulse-glow {
+  0% { transform: scale(1) translateY(0); opacity: 0.85; }
+  100% { transform: scale(1.08) translateY(-18px); opacity: 1; }
+}
+
+/* Champagne Gold Buttons & Gradients */
+.bg-gold-gradient {
+  background: linear-gradient(135deg, #D5B992 0%, #C5A880 50%, #AE8E63 100%);
+}
+
+.bg-gold-gradient:hover {
+  background: linear-gradient(135deg, #DFC5A0 0%, #CEB28B 50%, #B8986D 100%);
+}
+
+.bg-prugio-gradient {
+  background: linear-gradient(135deg, #005530 0%, #004225 55%, #002E19 100%);
+}
+
+.bg-prugio-gradient:hover {
+  background: linear-gradient(135deg, #00663A 0%, #004F2C 55%, #00381F 100%);
+}
+
+/* Badge Styles */
+.badge-gold {
+  background-color: rgba(197, 168, 128, 0.16);
+  color: #8A6D46;
+  border: 1px solid rgba(197, 168, 128, 0.45);
+}
+
+.badge-prugio {
+  background-color: rgba(0, 66, 37, 0.08);
+  color: var(--prugio-green);
+  border: 1px solid rgba(0, 66, 37, 0.22);
+}
+
+/* 1-Split Full Width Visual Slot */
+.visual-slot-card {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  border-radius: 1rem;
+  background-color: #0F172A;
+  box-shadow: 0 20px 45px -15px rgba(15, 23, 42, 0.14);
+  border: 1px solid rgba(197, 168, 128, 0.25);
+}
+
+.visual-slot-card img {
+  width: 100%;
+  height: auto;
+  min-height: 300px;
+  max-height: 680px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.75s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.visual-slot-card:hover img {
+  transform: scale(1.025);
+}
+
+/* Unit Type Horizontal Scroll Bar */
+.unit-scroll-container {
+  scrollbar-width: thin;
+  scrollbar-color: var(--champagne-gold) #E2E8F0;
+  -webkit-overflow-scrolling: touch;
+}
+
+.unit-scroll-container::-webkit-scrollbar {
+  height: 6px;
+}
+
+.unit-scroll-container::-webkit-scrollbar-track {
+  background: #F1F5F9;
+  border-radius: 9999px;
+}
+
+.unit-scroll-container::-webkit-scrollbar-thumb {
+  background: var(--champagne-gold);
+  border-radius: 9999px;
+}
+
+.unit-type-btn {
+  flex: 0 0 auto;
+  transition: all 0.25s ease;
+}
+
+.unit-type-btn.active {
+  background-color: var(--prugio-green);
+  color: #FFFFFF;
+  border-color: var(--champagne-gold);
+  box-shadow: 0 8px 20px -4px rgba(0, 66, 37, 0.35);
+  transform: translateY(-1px);
+}
+
+/* Full-Bleed Panorama Section */
+.panorama-slot {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  background-color: #0F172A;
+}
+
+.panorama-slot img {
+  width: 100%;
+  height: 420px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@media (min-width: 768px) {
+  .panorama-slot img {
+    height: 580px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .panorama-slot img {
+    height: 700px;
+  }
+}
+
+.panorama-slot:hover img {
+  transform: scale(1.02);
+}
+
+/* Footer (#2C2C2C Deep Charcoal Black 60% Tone) */
+.footer-charcoal {
+  background-color: var(--footer-bg);
+  color: #D1D5DB;
+}
+
+/* Glass Card */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.96);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(197, 168, 128, 0.45);
+}
+
+/* Modal Backdrop */
+.modal-backdrop {
+  background: rgba(15, 23, 42, 0.75);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+}
+
+/* Section Divider Accent */
+.section-divider {
+  width: 56px;
+  height: 3px;
+  background: linear-gradient(90deg, var(--prugio-green), var(--champagne-gold));
+  border-radius: 2px;
+}

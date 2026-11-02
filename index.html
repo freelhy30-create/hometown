@@ -1,0 +1,1268 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>풍무푸르지오 리버프론트 | 공식 분양 안내 및 모델하우스 방문예약</title>
+  <meta name="description" content="풍무의 내일을 바꾸는 리버프론트 프리미엄, 풍무푸르지오 리버프론트. 풍무역세권 도시개발구역 하이엔드 대단지 사업안내, 입지환경, 단지배치도, 84~180㎡ 평형안내 및 관심고객 등록.">
+  <meta name="keywords" content="풍무푸르지오 리버프론트, 풍무역 푸르지오, 김포 풍무 푸르지오, 풍무역세권 도시개발구역, 모델하우스 방문예약, 분양안내">
+  <meta name="robots" content="index, follow">
+
+  <!-- 카카오톡 및 SNS 링크 공유용 오픈그래프(OG) 메타 태그 완비 -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="풍무푸르지오 리버프론트 공식 분양 안내">
+  <meta property="og:title" content="풍무푸르지오 리버프론트 | 풍무의 내일을 바꾸는 리버프론트 프리미엄">
+  <meta property="og:description" content="풍무역세권 도시개발구역 프리미엄 대단지! 84㎡~180㎡ 하이엔드 평면 설계 및 분양가 상한제 메리트. 지금 모델하우스 방문예약 및 관심고객 등록 혜택을 확인하세요.">
+  <meta property="og:image" content="./풍무푸루지오/리버프런트/하단와이드1.png">
+  <meta property="og:image:alt" content="풍무푸르지오 리버프론트 광역 조감도">
+  <meta property="og:locale" content="ko_KR">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="풍무푸르지오 리버프론트 | 공식 분양 랜딩페이지">
+  <meta name="twitter:description" content="풍무의 내일을 바꾸는 리버프론트 프리미엄. 대표번호 1555-0828 / 관심고객 등록">
+  <meta name="twitter:image" content="./풍무푸루지오/리버프런트/하단와이드1.png">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Lucide Icons CDN -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            prugio: '#004225',
+            prugioDark: '#002E19',
+            prugioLight: '#0A5C36',
+            heroBeige: '#F5F2EB',
+            gold: '#C5A880',
+            goldLight: '#DFC8A8',
+            goldDark: '#A68960',
+            charcoalText: '#1F2937',
+            slateTone: '#334155',
+            footerCharcoal: '#2C2C2C'
+          }
+        }
+      }
+    };
+
+    // 로컬 이미지 미보유 시 깨짐 없이 로컬 백업 이미지 및 온라인 부동산 고화질 이미지로 순차 대체하는 Fallback 핸들러
+    window.handleImgError = function(imgEl, backupLocalSrc, onlineHighResSrc) {
+      const currentStep = imgEl.getAttribute('data-fallback-step') || '0';
+      if (currentStep === '0' && backupLocalSrc) {
+        imgEl.setAttribute('data-fallback-step', '1');
+        imgEl.src = backupLocalSrc;
+      } else if (currentStep !== '2' && onlineHighResSrc) {
+        imgEl.setAttribute('data-fallback-step', '2');
+        imgEl.src = onlineHighResSrc;
+      } else {
+        imgEl.onerror = null;
+      }
+    };
+  </script>
+</head>
+<body class="bg-white text-[#1F2937] antialiased selection:bg-[#004225] selection:text-white pb-16 md:pb-0">
+
+  <!-- =========================================================================
+       1. HEADER (상단 고정 Sticky GNB - 푸르지오 브리티시 그린 #004225)
+  ========================================================================== -->
+  <header id="site-header" class="sticky top-0 z-40 header-prugio text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        
+        <!-- 좌측: '풍무푸르지오 리버프론트' 로고 -->
+        <a href="#top" class="flex items-center gap-3 group focus:outline-none" aria-label="풍무푸르지오 리버프론트 홈으로 이동">
+          <div class="w-11 h-11 rounded-full bg-white/95 flex items-center justify-center p-1.5 shadow-md border border-[#C5A880]/70 group-hover:scale-105 transition-transform overflow-hidden">
+            <img src="images/logos.png" alt="푸르지오 심볼 로고" class="w-full h-full object-contain">
+          </div>
+          <div>
+            <span class="block text-base sm:text-lg lg:text-xl font-extrabold tracking-tight text-white leading-tight">
+              풍무푸르지오 리버프론트
+            </span>
+            <span class="block text-[10px] sm:text-xs font-medium tracking-widest text-[#DFC8A8] font-montserrat">
+              PUNGMU PRUGIO RIVERFRONT
+            </span>
+          </div>
+        </a>
+
+        <!-- 중앙: 5개 앵커 링크 메뉴 (하위 드롭다운 없음, Smooth Scroll 이동) -->
+        <nav class="hidden lg:flex items-center space-x-1 xl:space-x-3" aria-label="주요 섹션 내비게이션">
+          <a href="#business" class="nav-anchor active px-4 py-2.5 rounded-lg text-sm xl:text-base font-medium">사업안내</a>
+          <a href="#location" class="nav-anchor px-4 py-2.5 rounded-lg text-sm xl:text-base font-medium">입지환경</a>
+          <a href="#complex" class="nav-anchor px-4 py-2.5 rounded-lg text-sm xl:text-base font-medium">단지안내</a>
+          <a href="#units" class="nav-anchor px-4 py-2.5 rounded-lg text-sm xl:text-base font-medium">평형안내</a>
+          <a href="#premium" class="nav-anchor px-4 py-2.5 rounded-lg text-sm xl:text-base font-medium">미래가치</a>
+        </nav>
+
+        <!-- 우측: 대표번호 '1555-0828', '관심고객등록' 버튼 -->
+        <div class="flex items-center gap-2.5 sm:gap-3">
+          <a href="tel:1555-0828" class="hidden sm:inline-flex items-center gap-2 bg-black/25 hover:bg-black/40 px-3.5 py-2 rounded-lg border border-[#C5A880]/40 transition-colors">
+            <i data-lucide="phone-call" class="w-4 h-4 text-[#C5A880]"></i>
+            <div class="text-left">
+              <span class="block text-[10px] text-[#DFC8A8] leading-none">분양문의 대표번호</span>
+              <span class="block text-sm lg:text-base font-extrabold text-white font-montserrat tracking-tight leading-tight">1555-0828</span>
+            </div>
+          </a>
+
+          <button type="button" data-open-modal="modal-register" class="bg-gold-gradient text-[#0F172A] font-extrabold px-4 sm:px-5 py-2.5 rounded-lg text-xs sm:text-sm shadow-lg flex items-center gap-1.5 transition-all transform hover:-translate-y-0.5">
+            <i data-lucide="user-plus" class="w-4 h-4"></i>
+            <span>관심고객등록</span>
+          </button>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- 모바일/태블릿 GNB 앵커 메뉴 바 (하위 드롭다운 없이 즉시 스크롤 이동) -->
+    <nav class="lg:hidden bg-[#002E19] border-t border-[#C5A880]/20 px-2 py-2 flex items-center justify-around text-xs sm:text-sm overflow-x-auto" aria-label="모바일 섹션 내비게이션">
+      <a href="#business" class="nav-anchor active px-2.5 py-1.5 rounded text-white whitespace-nowrap">사업안내</a>
+      <a href="#location" class="nav-anchor px-2.5 py-1.5 rounded text-white/85 whitespace-nowrap">입지환경</a>
+      <a href="#complex" class="nav-anchor px-2.5 py-1.5 rounded text-white/85 whitespace-nowrap">단지안내</a>
+      <a href="#units" class="nav-anchor px-2.5 py-1.5 rounded text-white/85 whitespace-nowrap">평형안내</a>
+      <a href="#premium" class="nav-anchor px-2.5 py-1.5 rounded text-white/85 whitespace-nowrap">미래가치</a>
+    </nav>
+  </header>
+
+  <!-- =========================================================================
+       2. HERO BANNER (밝고 화사한 브라이트 파노라마 & 크리스탈 프로스트 글래스)
+  ========================================================================== -->
+  <section id="top" class="hero-section py-14 sm:py-20 lg:py-24 border-b border-[#E5DEC9] relative overflow-hidden">
+    <!-- 배경 뒤 디자인적 앰비언트 글로우 오브 (골든 & 브라이트 스카이 오로라 효과) -->
+    <div class="hero-ambient-orb-1"></div>
+    <div class="hero-ambient-orb-2"></div>
+    <div class="absolute inset-0 bg-gradient-to-b from-white/30 via-transparent to-white/70 pointer-events-none"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="grid lg:grid-cols-12 gap-10 lg:gap-12 items-center">
+        
+        <!-- 좌측: 메인 카피 및 CTA 버튼 -->
+        <div class="lg:col-span-7 space-y-6">
+          <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/95 backdrop-blur-md border border-[#C5A880] text-xs sm:text-sm font-bold tracking-wide text-[#8A6D46] shadow-sm">
+            <span class="w-2.5 h-2.5 rounded-full bg-[#004225] animate-ping"></span>
+            <span>HIGH-END RESIDENTIAL GALLERY • PUNGMU PRUGIO</span>
+          </div>
+
+          <h1 class="text-3xl sm:text-4xl lg:text-5xl xl:text-[52px] font-black text-[#0F172A] leading-[1.22] tracking-tight">
+            풍무의 내일을 바꾸는<br>
+            <span class="text-[#004225] drop-shadow-sm">리버프론트 프리미엄</span>
+          </h1>
+
+          <p class="text-base sm:text-lg text-slate-700 leading-relaxed font-medium max-w-2xl">
+            푸르지오의 하이엔드 주거 철학으로 완성하는 풍무역세권 도시개발구역의 랜드마크.<br class="hidden sm:inline">
+            품격 있는 브리티시 그린과 샴페인 골드 감성의 대단지에서 차원이 다른 일상을 경험하십시오.
+          </p>
+
+          <!-- 핵심 가치 4대 요약 카드 (밝고 선명한 화이트 크리스탈 카드) -->
+          <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-1">
+            <div class="hero-stat-card-bright p-4 rounded-xl">
+              <span class="block text-[11px] font-bold text-[#8A6D46]">도시개발 비전</span>
+              <span class="text-sm sm:text-base font-black text-[#004225] mt-0.5 block">풍무역세권 중심</span>
+            </div>
+            <div class="hero-stat-card-bright p-4 rounded-xl">
+              <span class="block text-[11px] font-bold text-[#8A6D46]">타입 구성</span>
+              <span class="text-sm sm:text-base font-black text-[#0F172A] mt-0.5 block font-montserrat">84㎡ ~ 180㎡</span>
+            </div>
+            <div class="hero-stat-card-bright p-4 rounded-xl">
+              <span class="block text-[11px] font-bold text-[#8A6D46]">합리적 가치</span>
+              <span class="text-sm sm:text-base font-black text-[#8A6D46] mt-0.5 block">분양가 상한제</span>
+            </div>
+            <div class="hero-stat-card-bright p-4 rounded-xl">
+              <span class="block text-[11px] font-bold text-[#8A6D46]">브랜드 파워</span>
+              <span class="text-sm sm:text-base font-black text-[#004225] mt-0.5 block">푸르지오 대단지</span>
+            </div>
+          </div>
+
+          <!-- CTA 버튼 영역: '모델하우스 방문예약' 및 사업안내 버튼 -->
+          <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-3.5 pt-2">
+            <button type="button" data-open-modal="modal-register" class="bg-prugio-gradient text-white font-extrabold px-7 py-4 rounded-xl text-base shadow-xl flex items-center justify-center gap-2.5 transition-all transform hover:-translate-y-0.5 border border-[#C5A880]/60">
+              <i data-lucide="calendar-check" class="w-5 h-5 text-[#DFC8A8]"></i>
+              <span>모델하우스 방문예약</span>
+              <i data-lucide="arrow-right" class="w-4 h-4 text-[#DFC8A8]"></i>
+            </button>
+
+            <a href="#business" class="bg-white/95 hover:bg-white text-[#0F172A] font-bold px-6 py-4 rounded-xl text-base shadow-md border border-[#C5A880]/70 flex items-center justify-center gap-2 transition-all">
+              <span>사업안내 자세히 보기</span>
+              <i data-lucide="chevron-down" class="w-4 h-4 text-[#004225]"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- 우측: VIP 관심고객 & 방문예약 다이렉트 접수 카드 (화사하고 밝은 크리스탈 프로스트 패널) -->
+        <div class="lg:col-span-5">
+          <div class="hero-bright-glass p-6 sm:p-8 rounded-2xl relative border-t-4 border-t-[#004225]">
+            <div class="flex items-center justify-between mb-4">
+              <div>
+                <span class="text-[11px] font-extrabold text-[#004225] tracking-widest uppercase font-montserrat">VIP PRIORITY REGISTRATION</span>
+                <h2 class="text-xl sm:text-2xl font-black text-[#0F172A] mt-0.5">관심고객 등록 · 방문예약</h2>
+              </div>
+              <div class="w-11 h-11 rounded-full bg-[#004225] flex items-center justify-center text-[#DFC8A8] shadow-md">
+                <i data-lucide="award" class="w-5 h-5"></i>
+              </div>
+            </div>
+
+            <p class="text-xs sm:text-sm text-slate-600 mb-5 leading-relaxed">
+              사전 관심고객 등록 시 <strong class="text-[#004225]">분양 일정 및 모집공고 안내, 잔여 로얄 동·호수 상담, 모델하우스 방문예약 문자</strong>를 우선 발송해 드립니다.
+            </p>
+
+            <form class="register-form space-y-3.5" aria-label="히어로 섹션 관심고객 등록 폼">
+              <div>
+                <label for="hero-name" class="block text-xs font-bold text-slate-800 mb-1">성함 <span class="text-red-600">*</span></label>
+                <input id="hero-name" name="name" type="text" required placeholder="성함을 입력해 주세요 (예: 홍길동)" class="w-full px-4 py-2.5 text-sm rounded-lg border border-slate-300 focus:ring-2 focus:ring-[#C5A880] focus:border-[#C5A880] outline-none bg-white text-slate-900 placeholder-slate-400 shadow-sm">
+              </div>
+
+              <div>
+                <label for="hero-phone" class="block text-xs font-bold text-slate-800 mb-1">휴대폰 번호 <span class="text-red-600">*</span></label>
+                <input id="hero-phone" name="phone" type="tel" required placeholder="010-0000-0000" class="w-full px-4 py-2.5 text-sm rounded-lg border border-slate-300 focus:ring-2 focus:ring-[#C5A880] focus:border-[#C5A880] outline-none bg-white text-slate-900 placeholder-slate-400 shadow-sm">
+              </div>
+
+              <div>
+                <label for="hero-unit" class="block text-xs font-bold text-slate-800 mb-1">희망 평형 선택 <span class="text-red-600">*</span></label>
+                <select id="hero-unit" name="type" required class="w-full px-4 py-2.5 text-sm rounded-lg border border-slate-300 focus:ring-2 focus:ring-[#C5A880] focus:border-[#C5A880] outline-none bg-white text-slate-900 shadow-sm">
+                  <option value="84" selected>84㎡ (84A · 84B · 84C · 84D · 84E · 84F)</option>
+                  <option value="106">106㎡ (106A · 106B 중대형 주력)</option>
+                  <option value="122">122㎡ (와이드 파노라마 대형)</option>
+                  <option value="180">180㎡ (180A · 180B1 · 180C 하이엔드 펜트)</option>
+                </select>
+              </div>
+
+              <div class="flex items-start gap-2 pt-1">
+                <input type="checkbox" id="hero-privacy" name="privacy" value="동의" required class="mt-1 w-4 h-4 rounded accent-[#004225]">
+                <label for="hero-privacy" class="text-xs text-slate-600 leading-snug">
+                  [필수] 개인정보 수집 및 이용에 동의합니다.
+                  <button type="button" data-open-modal="modal-privacy" class="underline text-[#004225] font-semibold ml-1 hover:text-slate-900">전문보기</button>
+                </label>
+              </div>
+
+              <button type="submit" class="w-full py-3.5 px-4 bg-gold-gradient text-slate-950 font-extrabold rounded-xl text-sm shadow-lg transition-all flex items-center justify-center gap-2 hover:shadow-xl hover:-translate-y-0.5">
+                <span>관심고객 등록 및 방문예약 신청</span>
+                <i data-lucide="check-circle-2" class="w-4 h-4"></i>
+              </button>
+            </form>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       MAIN CONTENT (퓨어 화이트 #FFFFFF 바탕 / 차콜 본문 텍스트 #1F2937)
+  ========================================================================== -->
+  <main class="bg-white text-[#1F2937]">
+
+    <!-- =======================================================================
+         3. 섹션 1. 사업안내 (#business)
+         - 대형 가로 1분할 이미지 슬롯 3장 (세로 스택 배치)
+         - 이미지 경로: ./풍무푸루지오/리버프런트/사업개요1.png, 2.png, 3.png
+         - 프로젝트 개요 요약 표(대지위치, 공급규모, 건폐율/용적률) 제공
+    ======================================================================== -->
+    <section id="business" class="py-20 lg:py-28 border-b border-slate-200">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-14">
+        
+        <!-- 섹션 헤더 -->
+        <div class="text-center max-w-3xl mx-auto space-y-3">
+          <span class="badge-prugio px-3.5 py-1 rounded-full text-xs font-extrabold tracking-widest uppercase font-montserrat">
+            SECTION 01 • BUSINESS OVERVIEW
+          </span>
+          <h2 class="text-3xl sm:text-4xl font-black text-[#1F2937] tracking-tight">사업안내</h2>
+          <div class="section-divider mx-auto"></div>
+          <p class="text-slate-600 text-sm sm:text-base pt-1">
+            김포 풍무역세권 도시개발구역의 중심에서 펼쳐지는 푸르지오 리버프론트의 웅장한 스케일과 사업 비전을 소개합니다.
+          </p>
+        </div>
+
+        <!-- 1분할 카드 슬롯: 사업개요 1 메인 비주얼 -->
+        <article class="space-y-3">
+          <div class="flex items-center justify-between px-1">
+            <span class="text-xs font-extrabold text-[#004225] tracking-wider uppercase font-montserrat">BUSINESS VISUAL 01 • GRAND MASTERPIECE</span>
+            <span class="badge-gold px-2.5 py-0.5 rounded text-xs font-bold">1분할 카드</span>
+          </div>
+          <div class="visual-slot-card">
+            <img
+              src="images/panoramic_2.jpg"
+              alt="풍무푸르지오 리버프론트 사업개요 조감도 1"
+              loading="lazy"
+              onerror="handleImgError(this, 'images/menu1_1.jpg', 'https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=1600&q=85')"
+            >
+            <div class="absolute bottom-0 inset-x-0 p-6 sm:p-8 bg-gradient-to-t from-slate-950/90 via-slate-950/55 to-transparent text-white">
+              <span class="text-xs font-bold text-[#DFC8A8] tracking-widest uppercase font-montserrat">LANDMARK ARCHITECTURE</span>
+              <h3 class="text-xl sm:text-2xl lg:text-3xl font-extrabold mt-1">풍무역세권의 스카이라인을 새롭게 정의하는 하이엔드 대단지</h3>
+              <p class="text-xs sm:text-sm text-slate-200 mt-1.5 max-w-3xl">
+                남향 위주의 단지 배치와 수변 조망 특화 설계로 완성된 풍무푸르지오 리버프론트의 압도적 스케일.
+              </p>
+            </div>
+          </div>
+        </article>
+
+        <!-- 프로젝트 개요 요약 표 (대지위치, 공급규모, 건폐율/용적률) -->
+        <div class="bg-[#F5F2EB]/60 rounded-2xl p-6 sm:p-8 border border-[#C5A880]/40 shadow-sm">
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 pb-4 mb-6 border-b border-[#C5A880]/30">
+            <div class="flex items-center gap-2.5">
+              <span class="w-2.5 h-6 rounded-sm bg-[#004225]"></span>
+              <h3 class="text-lg sm:text-xl font-extrabold text-[#1F2937]">풍무푸르지오 리버프론트 프로젝트 개요 요약</h3>
+            </div>
+            <span class="text-xs font-semibold text-[#8A6D46] font-montserrat">PROJECT SPECIFICATION SUMMARY</span>
+          </div>
+
+          <div class="overflow-x-auto">
+            <table class="w-full text-left border-collapse rounded-xl overflow-hidden bg-white shadow-sm border border-slate-200">
+              <tbody class="divide-y divide-slate-200 text-sm sm:text-base">
+                <tr class="grid grid-cols-1 md:grid-cols-12">
+                  <th class="md:col-span-3 bg-[#004225] text-white font-bold px-5 py-4 flex items-center gap-2">
+                    <i data-lucide="building-2" class="w-4 h-4 text-[#C5A880]"></i>
+                    <span>사업명</span>
+                  </th>
+                  <td class="md:col-span-9 px-5 py-4 font-bold text-[#1F2937]">
+                    풍무푸르지오 리버프론트 (풍무역세권 도시개발구역 공동주택)
+                  </td>
+                </tr>
+                <tr class="grid grid-cols-1 md:grid-cols-12">
+                  <th class="md:col-span-3 bg-[#004225]/95 text-white font-bold px-5 py-4 flex items-center gap-2">
+                    <i data-lucide="map-pin" class="w-4 h-4 text-[#C5A880]"></i>
+                    <span>대지위치</span>
+                  </th>
+                  <td class="md:col-span-9 px-5 py-4 text-[#1F2937] font-medium">
+                    경기도 김포시 풍무역세권 도시개발구역 일원
+                  </td>
+                </tr>
+                <tr class="grid grid-cols-1 md:grid-cols-12">
+                  <th class="md:col-span-3 bg-[#004225] text-white font-bold px-5 py-4 flex items-center gap-2">
+                    <i data-lucide="layers" class="w-4 h-4 text-[#C5A880]"></i>
+                    <span>공급규모</span>
+                  </th>
+                  <td class="md:col-span-9 px-5 py-4 text-[#1F2937] font-medium">
+                    지하 3층 ~ 지상 최고 35층, 공동주택 12개동 / 전용면적 84㎡ · 106㎡ · 122㎡ · 180㎡ (총 12개 타입 구성)
+                  </td>
+                </tr>
+                <tr class="grid grid-cols-1 md:grid-cols-12">
+                  <th class="md:col-span-3 bg-[#004225]/95 text-white font-bold px-5 py-4 flex items-center gap-2">
+                    <i data-lucide="pie-chart" class="w-4 h-4 text-[#C5A880]"></i>
+                    <span>건폐율 / 용적률</span>
+                  </th>
+                  <td class="md:col-span-9 px-5 py-4 text-[#1F2937] font-medium">
+                    건폐율 약 16.85% (쾌적한 공원형 동간 거리 확보) / 용적률 약 219.42%
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- 대형 가로 1분할 이미지 슬롯 3장 (세로 스택 배치) -->
+        <div class="space-y-12">
+          
+          <!-- 사업개요 1 -->
+          <article class="space-y-3">
+            <div class="flex items-center justify-between px-1">
+              <span class="text-xs font-extrabold text-[#004225] tracking-wider uppercase font-montserrat">OVERVIEW VISUAL 01 • GRAND MASTERPIECE</span>
+              <span class="badge-gold px-2.5 py-0.5 rounded text-xs font-bold">사업개요 1</span>
+            </div>
+            <div class="visual-slot-card">
+              <img
+                src="./풍무푸루지오/리버프런트/사업개요1.png"
+                alt="풍무푸르지오 리버프론트 사업개요 조감도 1"
+                loading="lazy"
+                onerror="handleImgError(this, 'images/menu1_1.jpg', 'https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=1600&q=85')"
+              >
+              <div class="absolute bottom-0 inset-x-0 p-6 sm:p-8 bg-gradient-to-t from-slate-950/90 via-slate-950/55 to-transparent text-white">
+                <span class="text-xs font-bold text-[#DFC8A8] tracking-widest uppercase font-montserrat">LANDMARK ARCHITECTURE</span>
+                <h3 class="text-xl sm:text-2xl lg:text-3xl font-extrabold mt-1">풍무역세권의 스카이라인을 새롭게 정의하는 하이엔드 대단지</h3>
+                <p class="text-xs sm:text-sm text-slate-200 mt-1.5 max-w-3xl">
+                  남향 위주의 단지 배치와 수변 조망 특화 설계로 완성된 풍무푸르지오 리버프론트의 압도적 스케일.
+                </p>
+              </div>
+            </div>
+          </article>
+
+          <!-- 사업개요 2 -->
+          <article class="space-y-3">
+            <div class="flex items-center justify-between px-1">
+              <span class="text-xs font-extrabold text-[#004225] tracking-wider uppercase font-montserrat">OVERVIEW VISUAL 02 • PRUGIO BRAND PRIDE</span>
+              <span class="badge-gold px-2.5 py-0.5 rounded text-xs font-bold">사업개요 2</span>
+            </div>
+            <div class="visual-slot-card">
+              <img
+                src="./풍무푸루지오/리버프런트/사업개요2.png"
+                alt="풍무푸르지오 리버프론트 브랜드 및 문주 특화 디자인 2"
+                loading="lazy"
+                onerror="handleImgError(this, 'images/menu1_2.jpg', 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1600&q=85')"
+              >
+              <div class="absolute bottom-0 inset-x-0 p-6 sm:p-8 bg-gradient-to-t from-slate-950/90 via-slate-950/55 to-transparent text-white">
+                <span class="text-xs font-bold text-[#DFC8A8] tracking-widest uppercase font-montserrat">BRITISH GREEN & CHAMPAGNE GOLD</span>
+                <h3 class="text-xl sm:text-2xl lg:text-3xl font-extrabold mt-1">푸르지오의 철학이 담긴 그랜드 게이트웨이 & 외관 특화</h3>
+                <p class="text-xs sm:text-sm text-slate-200 mt-1.5 max-w-3xl">
+                  브리티시 그린과 샴페인 골드가 조화를 이루는 웅장한 문주와 커튼월룩 외관 디자인이 입주민의 자부심을 높입니다.
+                </p>
+              </div>
+            </div>
+          </article>
+
+          <!-- 사업개요 3 -->
+          <article class="space-y-3">
+            <div class="flex items-center justify-between px-1">
+              <span class="text-xs font-extrabold text-[#004225] tracking-wider uppercase font-montserrat">OVERVIEW VISUAL 03 • URBAN DEVELOPMENT VISION</span>
+              <span class="badge-gold px-2.5 py-0.5 rounded text-xs font-bold">사업개요 3</span>
+            </div>
+            <div class="visual-slot-card">
+              <img
+                src="./풍무푸루지오/리버프런트/사업개요3.png"
+                alt="풍무푸르지오 리버프론트 사업비전 및 광역 스케일 3"
+                loading="lazy"
+                onerror="handleImgError(this, 'images/menu1_3.jpg', 'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1600&q=85')"
+              >
+              <div class="absolute bottom-0 inset-x-0 p-6 sm:p-8 bg-gradient-to-t from-slate-950/90 via-slate-950/55 to-transparent text-white">
+                <span class="text-xs font-bold text-[#DFC8A8] tracking-widest uppercase font-montserrat">PREMIUM CITY LIFE</span>
+                <h3 class="text-xl sm:text-2xl lg:text-3xl font-extrabold mt-1">주거·상업·문화·교육이 결합된 완성형 자족 신도시 중심</h3>
+                <p class="text-xs sm:text-sm text-slate-200 mt-1.5 max-w-3xl">
+                  풍무역세권 도시개발구역의 핵심 수혜 단지로서 검증된 브랜드 가치와 주거 쾌적성을 동시에 선사합니다.
+                </p>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         4. 섹션 2. 입지환경 (#location)
+         - 대형 가로 1분할 이미지 슬롯 3장 (교통망, 수변공원, 학군 및 인프라)
+         - 이미지 경로: ./풍무푸루지오/리버프런트/입지1.png, 2.png, 3.png
+    ======================================================================== -->
+    <section id="location" class="py-20 lg:py-28 bg-[#FAF8F5] border-b border-slate-200">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-14">
+        
+        <!-- 섹션 헤더 -->
+        <div class="text-center max-w-3xl mx-auto space-y-3">
+          <span class="badge-prugio px-3.5 py-1 rounded-full text-xs font-extrabold tracking-widest uppercase font-montserrat">
+            SECTION 02 • LOCATION ENVIRONMENT
+          </span>
+          <h2 class="text-3xl sm:text-4xl font-black text-[#1F2937] tracking-tight">입지환경</h2>
+          <div class="section-divider mx-auto"></div>
+          <p class="text-slate-600 text-sm sm:text-base pt-1">
+            서울 직결 쾌속 교통망부터 쾌적한 수변공원, 도보 학군과 중심 상업 인프라까지 완벽하게 갖춘 특급 입지환경입니다.
+          </p>
+        </div>
+
+        <!-- 대형 가로 1분할 이미지 슬롯 3장 (세로 스택 배치) -->
+        <div class="space-y-12">
+
+          <!-- 입지 1: 교통망 -->
+          <article class="space-y-3">
+            <div class="flex items-center justify-between px-1">
+              <span class="text-xs font-extrabold text-[#004225] tracking-wider uppercase font-montserrat">LOCATION 01 • EXPRESS TRAFFIC NETWORK</span>
+              <span class="badge-gold px-2.5 py-0.5 rounded text-xs font-bold">교통망</span>
+            </div>
+            <div class="visual-slot-card">
+              <img
+                src="./풍무푸루지오/리버프런트/입지1.png"
+                alt="풍무푸르지오 리버프론트 광역 교통망 안내"
+                loading="lazy"
+                onerror="handleImgError(this, 'images/menu2_1.jpg', 'https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?auto=format&fit=crop&w=1600&q=85')"
+              >
+              <div class="absolute bottom-0 inset-x-0 p-6 sm:p-8 bg-gradient-to-t from-slate-950/90 via-slate-950/55 to-transparent text-white">
+                <span class="text-xs font-bold text-[#DFC8A8] tracking-widest uppercase font-montserrat">FAST ACCESS TO SEOUL</span>
+                <h3 class="text-xl sm:text-2xl lg:text-3xl font-extrabold mt-1">김포골드라인 풍무역 & 서울 주요 업무지구 쾌속 교통망</h3>
+                <p class="text-xs sm:text-sm text-slate-200 mt-1.5 max-w-3xl">
+                  풍무역 역세권 프리미엄과 김포한강로, 올림픽대로, 수도권제1순환고속도로를 통한 마곡·여의도·상암 빠른 출퇴근.
+                </p>
+              </div>
+            </div>
+          </article>
+
+          <!-- 입지 2: 수변공원 -->
+          <article class="space-y-3">
+            <div class="flex items-center justify-between px-1">
+              <span class="text-xs font-extrabold text-[#004225] tracking-wider uppercase font-montserrat">LOCATION 02 • RIVERFRONT & ECO PARK</span>
+              <span class="badge-gold px-2.5 py-0.5 rounded text-xs font-bold">수변공원</span>
+            </div>
+            <div class="visual-slot-card">
+              <img
+                src="./풍무푸루지오/리버프런트/입지2.png"
+                alt="풍무푸르지오 리버프론트 수변공원 및 친수 자연환경"
+                loading="lazy"
+                onerror="handleImgError(this, 'images/menu2_3.jpg', 'https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1600&q=85')"
+              >
+              <div class="absolute bottom-0 inset-x-0 p-6 sm:p-8 bg-gradient-to-t from-slate-950/90 via-slate-950/55 to-transparent text-white">
+                <span class="text-xs font-bold text-[#DFC8A8] tracking-widest uppercase font-montserrat">RIVERFRONT HEALING LIFE</span>
+                <h3 class="text-xl sm:text-2xl lg:text-3xl font-extrabold mt-1">사계절의 여유를 누리는 수변공원 & 그린 에코 라이프</h3>
+                <p class="text-xs sm:text-sm text-slate-200 mt-1.5 max-w-3xl">
+                  쾌적한 수변 산책로와 근린공원이 인접하여 도심 속에서도 자연의 여유와 탁 트인 개방감을 만끽할 수 있습니다.
+                </p>
+              </div>
+            </div>
+          </article>
+
+          <!-- 입지 3: 학군 및 인프라 -->
+          <article class="space-y-3">
+            <div class="flex items-center justify-between px-1">
+              <span class="text-xs font-extrabold text-[#004225] tracking-wider uppercase font-montserrat">LOCATION 03 • EDUCATION & LIVING INFRASTRUCTURE</span>
+              <span class="badge-gold px-2.5 py-0.5 rounded text-xs font-bold">학군 및 인프라</span>
+            </div>
+            <div class="visual-slot-card">
+              <img
+                src="./풍무푸루지오/리버프런트/입지3.png"
+                alt="풍무푸르지오 리버프론트 명문 학군 및 중심 생활 인프라"
+                loading="lazy"
+                onerror="handleImgError(this, 'images/menu2_2.jpg', 'https://images.unsplash.com/photo-1580587771525-78b9dba3b914?auto=format&fit=crop&w=1600&q=85')"
+              >
+              <div class="absolute bottom-0 inset-x-0 p-6 sm:p-8 bg-gradient-to-t from-slate-950/90 via-slate-950/55 to-transparent text-white">
+                <span class="text-xs font-bold text-[#DFC8A8] tracking-widest uppercase font-montserrat">ONE-STOP EDUCATION & SHOPPING</span>
+                <h3 class="text-xl sm:text-2xl lg:text-3xl font-extrabold mt-1">안심 도보 학군과 대형 쇼핑·문화시설이 밀집한 원스톱 인프라</h3>
+                <p class="text-xs sm:text-sm text-slate-200 mt-1.5 max-w-3xl">
+                  초·중·고 교육 환경과 이마트 트레이더스, 홈플러스, CGV, 풍무국민체육센터 등 완성된 중심 생활권을 누립니다.
+                </p>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         5. 섹션 3. 단지안내 (#complex)
+         - 대형 가로 1분할 이미지 슬롯 3장 (단지배치도, 동호수표, 커뮤니티 센터)
+         - 이미지 경로: ./풍무푸루지오/리버프런트/단지1.png, 2.png, 3.png
+    ======================================================================== -->
+    <section id="complex" class="py-20 lg:py-28 bg-white border-b border-slate-200">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-14">
+        
+        <!-- 섹션 헤더 -->
+        <div class="text-center max-w-3xl mx-auto space-y-3">
+          <span class="badge-prugio px-3.5 py-1 rounded-full text-xs font-extrabold tracking-widest uppercase font-montserrat">
+            SECTION 03 • COMPLEX GUIDE
+          </span>
+          <h2 class="text-3xl sm:text-4xl font-black text-[#1F2937] tracking-tight">단지안내</h2>
+          <div class="section-divider mx-auto"></div>
+          <p class="text-slate-600 text-sm sm:text-base pt-1">
+            채광과 통풍을 극대화한 단지배치도부터 한눈에 보는 동호수표, 입주민 전용 하이엔드 커뮤니티 센터를 확인하세요.
+          </p>
+        </div>
+
+        <!-- 대형 가로 1분할 이미지 슬롯 3장 (세로 스택 배치) -->
+        <div class="space-y-12">
+
+          <!-- 단지 1: 단지배치도 -->
+          <article class="space-y-3">
+            <div class="flex items-center justify-between px-1">
+              <span class="text-xs font-extrabold text-[#004225] tracking-wider uppercase font-montserrat">COMPLEX 01 • MASTER SITE PLAN</span>
+              <span class="badge-gold px-2.5 py-0.5 rounded text-xs font-bold">단지배치도</span>
+            </div>
+            <div class="visual-slot-card">
+              <img
+                src="./풍무푸루지오/리버프런트/단지1.png"
+                alt="풍무푸르지오 리버프론트 단지배치도"
+                loading="lazy"
+                onerror="handleImgError(this, 'images/menu3_1.jpg', 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1600&q=85')"
+              >
+              <div class="absolute bottom-0 inset-x-0 p-6 sm:p-8 bg-gradient-to-t from-slate-950/90 via-slate-950/55 to-transparent text-white">
+                <span class="text-xs font-bold text-[#DFC8A8] tracking-widest uppercase font-montserrat">SOUTH-FACING PARK COMPLEX</span>
+                <h3 class="text-xl sm:text-2xl lg:text-3xl font-extrabold mt-1">남향 위주 동 배치 & 지상에 차가 없는 공원형 단지배치도</h3>
+                <p class="text-xs sm:text-sm text-slate-200 mt-1.5 max-w-3xl">
+                  넓은 동간 거리와 바람길 확보로 세대 간 프라이버시를 보호하며, 중앙 수변광장과 테마 정원이 단지 곳곳에 펼쳐집니다.
+                </p>
+              </div>
+            </div>
+          </article>
+
+          <!-- 단지 2: 동호수표 -->
+          <article class="space-y-3">
+            <div class="flex items-center justify-between px-1">
+              <span class="text-xs font-extrabold text-[#004225] tracking-wider uppercase font-montserrat">COMPLEX 02 • DONG & UNIT CHART</span>
+              <span class="badge-gold px-2.5 py-0.5 rounded text-xs font-bold">동호수표</span>
+            </div>
+            <div class="visual-slot-card">
+              <img
+                src="./풍무푸루지오/리버프런트/단지2.png"
+                alt="풍무푸르지오 리버프론트 동호수 배치표"
+                loading="lazy"
+                onerror="handleImgError(this, 'images/menu3_3.jpg', 'https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=1600&q=85')"
+              >
+              <div class="absolute bottom-0 inset-x-0 p-6 sm:p-8 bg-gradient-to-t from-slate-950/90 via-slate-950/55 to-transparent text-white">
+                <span class="text-xs font-bold text-[#DFC8A8] tracking-widest uppercase font-montserrat">SYSTEMATIC UNIT DISTRIBUTION</span>
+                <h3 class="text-xl sm:text-2xl lg:text-3xl font-extrabold mt-1">84㎡부터 180㎡까지 조망과 일조를 고려한 동·호수 구성</h3>
+                <p class="text-xs sm:text-sm text-slate-200 mt-1.5 max-w-3xl">
+                  각 동별 로얄층 및 타입별 배치를 한눈에 비교하고 라이프스타일에 맞는 최적의 동·호수를 선택하실 수 있습니다.
+                </p>
+              </div>
+            </div>
+          </article>
+
+          <!-- 단지 3: 커뮤니티 센터 -->
+          <article class="space-y-3">
+            <div class="flex items-center justify-between px-1">
+              <span class="text-xs font-extrabold text-[#004225] tracking-wider uppercase font-montserrat">COMPLEX 03 • GREENERY LOUNGE COMMUNITY</span>
+              <span class="badge-gold px-2.5 py-0.5 rounded text-xs font-bold">커뮤니티 센터</span>
+            </div>
+            <div class="visual-slot-card">
+              <img
+                src="./풍무푸루지오/리버프런트/단지3.png"
+                alt="풍무푸르지오 리버프론트 그리너리 라운지 커뮤니티 센터"
+                loading="lazy"
+                onerror="handleImgError(this, 'images/menu3_2.jpg', 'https://images.unsplash.com/photo-1540518614846-7ede433c457?auto=format&fit=crop&w=1600&q=85')"
+              >
+              <div class="absolute bottom-0 inset-x-0 p-6 sm:p-8 bg-gradient-to-t from-slate-950/90 via-slate-950/55 to-transparent text-white">
+                <span class="text-xs font-bold text-[#DFC8A8] tracking-widest uppercase font-montserrat">HIGH-END GREENERY LOUNGE</span>
+                <h3 class="text-xl sm:text-2xl lg:text-3xl font-extrabold mt-1">피트니스·실내골프·사우나·독서실을 갖춘 그리너리 라운지</h3>
+                <p class="text-xs sm:text-sm text-slate-200 mt-1.5 max-w-3xl">
+                  입주민의 건강한 여가와 품격 있는 교류를 위한 호텔급 커뮤니티 시설이 단지 내에 마련됩니다.
+                </p>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         6. 섹션 4. 평형안내 (#units)
+         - 가로 스크롤형 12개 타입 버튼 [84A · 84B · 84C · 84D · 84E · 84F · 106A · 106B · 122 · 180A · 180B1 · 180C]
+         - 사용자가 타입을 누르면 페이지 이동 없이 해당 박스 안에서 평면도 이미지와 전용/공급면적 제원이 즉각 전환되는 인터랙티브 뷰어 구현
+         - 대표 인테리어 갤러리 이미지 2장 추가
+    ======================================================================== -->
+    <section id="units" class="py-20 lg:py-28 bg-[#F5F2EB]/60 border-b border-slate-200">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-14">
+        
+        <!-- 섹션 헤더 -->
+        <div class="text-center max-w-3xl mx-auto space-y-3">
+          <span class="badge-prugio px-3.5 py-1 rounded-full text-xs font-extrabold tracking-widest uppercase font-montserrat">
+            SECTION 04 • UNIT PLAN & INTERIOR
+          </span>
+          <h2 class="text-3xl sm:text-4xl font-black text-[#1F2937] tracking-tight">평형안내</h2>
+          <div class="section-divider mx-auto"></div>
+          <p class="text-slate-600 text-sm sm:text-base pt-1">
+            84㎡ 주력 타입부터 106㎡, 122㎡, 180㎡ 펜트하우스급 대형 타입까지 총 12개 타입의 혁신 평면 설계를 지금 클릭하여 비교해 보세요.
+          </p>
+        </div>
+
+        <!-- 1분할 카드 슬롯: 평형안내 메인 비주얼 -->
+        <article class="space-y-3">
+          <div class="flex items-center justify-between px-1">
+            <span class="text-xs font-extrabold text-[#004225] tracking-wider uppercase font-montserrat">UNIT VISUAL • INNOVATIVE INTERIOR DESIGN</span>
+            <span class="badge-gold px-2.5 py-0.5 rounded text-xs font-bold">1분할 카드</span>
+          </div>
+          <div class="visual-slot-card">
+            <img
+              src="./풍무푸루지오/리버프론트/사업개요1.png"
+              alt="풍무푸르지오 리버프론트 평형 및 인테리어 비주얼"
+              loading="lazy"
+              onerror="handleImgError(this, 'images/menu4_1.jpg', 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1600&q=85')"
+            >
+            <div class="absolute bottom-0 inset-x-0 p-6 sm:p-8 bg-gradient-to-t from-slate-950/90 via-slate-950/55 to-transparent text-white">
+              <span class="text-xs font-bold text-[#DFC8A8] tracking-widest uppercase font-montserrat">PRUGIO SIGNATURE INTERIOR</span>
+              <h3 class="text-xl sm:text-2xl lg:text-3xl font-extrabold mt-1">공간의 품격을 완성하는 푸르지오 혁신 평면 & 하이엔드 인테리어</h3>
+              <p class="text-xs sm:text-sm text-slate-200 mt-1.5 max-w-3xl">
+                와이드한 개방감의 거실과 수변 조망 파노라마 뷰, 최고급 마감재가 선사하는 프리미엄 주거 공간.
+              </p>
+            </div>
+          </div>
+        </article>
+
+        <!-- 인터랙티브 12개 타입 평면도 뷰어 박스 -->
+        <div class="bg-white rounded-3xl shadow-xl border border-[#C5A880]/40 overflow-hidden">
+          
+          <!-- 상단: 가로 스크롤형 12개 타입 선택 버튼 바 -->
+          <div class="bg-[#004225] p-4 sm:p-6 border-b border-[#C5A880]/30">
+            <div class="flex items-center justify-between mb-3">
+              <span class="text-xs font-bold text-[#DFC8A8] tracking-widest uppercase font-montserrat">
+                SELECT UNIT TYPE (12 TYPES INTERACTIVE VIEWER)
+              </span>
+              <span class="text-xs text-white/75 hidden sm:inline">버튼을 클릭하면 평면도와 면적 제원이 즉시 전환됩니다</span>
+            </div>
+
+            <div class="unit-scroll-container flex items-center gap-2 overflow-x-auto pb-2" role="tablist" aria-label="12개 평형 타입 선택">
+              <button type="button" data-unit="84A" class="unit-type-btn active px-4 py-2.5 rounded-xl text-xs sm:text-sm font-extrabold border border-white/20 bg-white/10 text-white font-montserrat">84A</button>
+              <button type="button" data-unit="84B" class="unit-type-btn px-4 py-2.5 rounded-xl text-xs sm:text-sm font-extrabold border border-white/20 bg-white/10 text-white font-montserrat">84B</button>
+              <button type="button" data-unit="84C" class="unit-type-btn px-4 py-2.5 rounded-xl text-xs sm:text-sm font-extrabold border border-white/20 bg-white/10 text-white font-montserrat">84C</button>
+              <button type="button" data-unit="84D" class="unit-type-btn px-4 py-2.5 rounded-xl text-xs sm:text-sm font-extrabold border border-white/20 bg-white/10 text-white font-montserrat">84D</button>
+              <button type="button" data-unit="84E" class="unit-type-btn px-4 py-2.5 rounded-xl text-xs sm:text-sm font-extrabold border border-white/20 bg-white/10 text-white font-montserrat">84E</button>
+              <button type="button" data-unit="84F" class="unit-type-btn px-4 py-2.5 rounded-xl text-xs sm:text-sm font-extrabold border border-white/20 bg-white/10 text-white font-montserrat">84F</button>
+              <button type="button" data-unit="106A" class="unit-type-btn px-4 py-2.5 rounded-xl text-xs sm:text-sm font-extrabold border border-white/20 bg-white/10 text-white font-montserrat">106A</button>
+              <button type="button" data-unit="106B" class="unit-type-btn px-4 py-2.5 rounded-xl text-xs sm:text-sm font-extrabold border border-white/20 bg-white/10 text-white font-montserrat">106B</button>
+              <button type="button" data-unit="122" class="unit-type-btn px-4 py-2.5 rounded-xl text-xs sm:text-sm font-extrabold border border-white/20 bg-white/10 text-white font-montserrat">122</button>
+              <button type="button" data-unit="180A" class="unit-type-btn px-4 py-2.5 rounded-xl text-xs sm:text-sm font-extrabold border border-white/20 bg-white/10 text-white font-montserrat">180A</button>
+              <button type="button" data-unit="180B1" class="unit-type-btn px-4 py-2.5 rounded-xl text-xs sm:text-sm font-extrabold border border-white/20 bg-white/10 text-white font-montserrat">180B1</button>
+              <button type="button" data-unit="180C" class="unit-type-btn px-4 py-2.5 rounded-xl text-xs sm:text-sm font-extrabold border border-white/20 bg-white/10 text-white font-montserrat">180C</button>
+            </div>
+          </div>
+
+          <!-- 하단: 평면도 비주얼 영역 & 전용/공급면적 상세 제원 패널 -->
+          <div class="p-6 sm:p-8 lg:p-10">
+            <div class="grid lg:grid-cols-12 gap-8 items-center">
+              
+              <!-- 좌측(8컬럼): 평면도 이미지 / 건축 도면 뷰어 -->
+              <div class="lg:col-span-8 space-y-3">
+                <div class="relative rounded-2xl overflow-hidden bg-white border border-slate-200 min-h-[340px] sm:min-h-[440px] flex items-center justify-center p-3 sm:p-5 shadow-sm">
+                  <!-- 평면도 사진(84A: ./images/유니트 84a-1.png) 표시 -->
+                  <img
+                    id="unit-floorplan-img"
+                    src="./images/유니트 84a-1.png"
+                    alt="84A 타입 평면도"
+                    class="w-full h-auto max-h-[520px] object-contain"
+                  >
+                  <div id="unit-floorplan-svg" class="w-full h-full hidden">
+                    <!-- app.js에서 선택된 타입에 맞춰 즉각 렌더링 -->
+                  </div>
+                </div>
+                <p class="text-xs text-slate-500 text-right">
+                  ※ 상기 평면도 및 면적 제원은 소비자의 이해를 돕기 위한 개략도이며 인허가 과정 및 실제 시공 시 다소 변경될 수 있습니다.
+                </p>
+              </div>
+
+              <!-- 우측(4컬럼): 전용/공급면적 제원 및 타입 특장점 -->
+              <div class="lg:col-span-4 bg-[#FAF8F5] p-6 sm:p-7 rounded-2xl border border-[#C5A880]/40 space-y-5">
+                <div class="border-b border-[#C5A880]/30 pb-4">
+                  <span id="unit-badge-label" class="inline-block px-3 py-1 rounded-full badge-prugio text-xs font-extrabold font-montserrat mb-2">
+                    4BAY 판상형 주력 타입
+                  </span>
+                  <h3 id="unit-title" class="text-2xl sm:text-3xl font-black text-[#1F2937] font-montserrat">
+                    84㎡ A TYPE
+                  </h3>
+                  <p id="unit-subtitle" class="text-xs sm:text-sm text-slate-600 mt-1">
+                    채광과 맞통풍이 뛰어난 4Bay 4Room 혁신 평면
+                  </p>
+                </div>
+
+                <!-- 면적 제원 테이블 -->
+                <div class="space-y-3 text-sm">
+                  <div class="flex items-center justify-between py-2.5 border-b border-slate-200">
+                    <span class="text-slate-500 font-medium">전용면적</span>
+                    <span id="unit-exclusive-area" class="font-extrabold text-[#004225] font-montserrat text-base">84.96㎡ (25.70평)</span>
+                  </div>
+                  <div class="flex items-center justify-between py-2.5 border-b border-slate-200">
+                    <span class="text-slate-500 font-medium">주거공용면적</span>
+                    <span id="unit-common-area" class="font-bold text-[#1F2937] font-montserrat">27.42㎡</span>
+                  </div>
+                  <div class="flex items-center justify-between py-2.5 border-b border-slate-200">
+                    <span class="text-slate-500 font-medium">공급면적</span>
+                    <span id="unit-supply-area" class="font-extrabold text-[#1F2937] font-montserrat text-base">112.38㎡ (33.99평)</span>
+                  </div>
+                  <div class="flex items-center justify-between py-2.5 border-b border-slate-200">
+                    <span class="text-slate-500 font-medium">실내 공간구성</span>
+                    <span id="unit-rooms" class="font-bold text-[#1F2937] text-right">침실3 · 알파룸 · 욕실2 · 드레스룸 · 팬트리</span>
+                  </div>
+                </div>
+
+                <!-- 설계 포인트 -->
+                <div class="bg-white p-4 rounded-xl border border-slate-200">
+                  <span class="block text-xs font-extrabold text-[#8A6D46] mb-1">핵심 설계 포인트</span>
+                  <p id="unit-feature" class="text-xs sm:text-sm text-[#1F2937] leading-relaxed font-medium">
+                    4Bay 판상형 맞통풍 구조, 현관 워크인 창고 및 주방 대형 팬트리, 안방 광폭 드레스룸 특화 설계가 적용됩니다.
+                  </p>
+                </div>
+
+                <button type="button" data-open-modal="modal-register" class="w-full py-3.5 px-4 bg-prugio-gradient text-white font-extrabold rounded-xl text-sm shadow-lg flex items-center justify-center gap-2 transition-all">
+                  <i data-lucide="file-text" class="w-4 h-4 text-[#C5A880]"></i>
+                  <span id="unit-cta-text">84A 타입 분양가 및 잔여세대 문의</span>
+                </button>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <!-- 대표 인테리어 갤러리 이미지 2장 추가 -->
+        <div class="space-y-6 pt-4">
+          <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-2 border-b border-slate-300 pb-3">
+            <div>
+              <span class="text-xs font-extrabold text-[#004225] tracking-widest uppercase font-montserrat">INTERIOR GALLERY</span>
+              <h3 class="text-2xl font-extrabold text-[#1F2937] mt-0.5">품격을 더한 하이엔드 인테리어 갤러리</h3>
+            </div>
+            <span class="text-xs text-slate-500">브리티시 모던 & 샴페인 골드 마감 특화</span>
+          </div>
+
+          <div class="grid md:grid-cols-2 gap-8">
+            <!-- 대표 인테리어 1 -->
+            <article class="visual-slot-card group">
+              <img
+                src="./풍무푸루지오/리버프런트/인테리어1.png"
+                alt="풍무푸르지오 리버프론트 거실 대표 인테리어 갤러리 1"
+                class="w-full !h-[340px] sm:!h-[400px] object-cover"
+                loading="lazy"
+                onerror="handleImgError(this, 'images/menu4_1.jpg', 'https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1200&q=85')"
+              >
+              <div class="absolute bottom-0 inset-x-0 p-6 bg-gradient-to-t from-slate-950/90 via-slate-950/50 to-transparent text-white">
+                <span class="text-[11px] font-bold text-[#DFC8A8] tracking-widest uppercase font-montserrat">INTERIOR GALLERY 01 • LIVING ROOM</span>
+                <h4 class="text-lg sm:text-xl font-extrabold mt-1">우물천장 와이드 거실 & 유럽산 세라믹 아트월</h4>
+                <p class="text-xs text-slate-200 mt-1">채광과 개방감을 극대화한 광폭 거실과 히든 도어 라인 조명이 깊이 있는 공간감을 연출합니다.</p>
+              </div>
+            </article>
+
+            <!-- 대표 인테리어 2 -->
+            <article class="visual-slot-card group">
+              <img
+                src="./풍무푸루지오/리버프런트/인테리어2.png"
+                alt="풍무푸르지오 리버프론트 주방 및 다이닝 대표 인테리어 갤러리 2"
+                class="w-full !h-[340px] sm:!h-[400px] object-cover"
+                loading="lazy"
+                onerror="handleImgError(this, 'images/menu4_2.jpg', 'https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=1200&q=85')"
+              >
+              <div class="absolute bottom-0 inset-x-0 p-6 bg-gradient-to-t from-slate-950/90 via-slate-950/50 to-transparent text-white">
+                <span class="text-[11px] font-bold text-[#DFC8A8] tracking-widest uppercase font-montserrat">INTERIOR GALLERY 02 • KITCHEN & DINING</span>
+                <h4 class="text-lg sm:text-xl font-extrabold mt-1">샴페인 골드 아일랜드 다이닝 & 명품 빌트인 주방</h4>
+                <p class="text-xs text-slate-200 mt-1">엔지니어드 스톤 상판과 대용량 수납 팬트리로 실용성과 하이엔드 미학을 동시에 완성했습니다.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         7. 섹션 5. 미래가치 (#premium)
+         - 대형 가로 1분할 이미지 슬롯 3장 (풍무역세권 개발호재, 분양가 상한제 메리트, 스마트홈 IoT)
+         - 이미지 경로: ./풍무푸루지오/리버프런트/미래가치1.png, 2.png, 3.png
+    ======================================================================== -->
+    <section id="premium" class="py-20 lg:py-28 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-14">
+        
+        <!-- 섹션 헤더 -->
+        <div class="text-center max-w-3xl mx-auto space-y-3">
+          <span class="badge-prugio px-3.5 py-1 rounded-full text-xs font-extrabold tracking-widest uppercase font-montserrat">
+            SECTION 05 • FUTURE PREMIUM VALUE
+          </span>
+          <h2 class="text-3xl sm:text-4xl font-black text-[#1F2937] tracking-tight">미래가치</h2>
+          <div class="section-divider mx-auto"></div>
+          <p class="text-slate-600 text-sm sm:text-base pt-1">
+            풍무역세권 도시개발호재, 합리적인 분양가 상한제 메리트, 최첨단 스마트홈 IoT 시스템이 만드는 확고한 미래가치를 확인하세요.
+          </p>
+        </div>
+
+        <!-- 대형 가로 1분할 이미지 슬롯 3장 (세로 스택 배치) -->
+        <div class="space-y-12">
+
+          <!-- 미래가치 1: 풍무역세권 개발호재 -->
+          <article class="space-y-3">
+            <div class="flex items-center justify-between px-1">
+              <span class="text-xs font-extrabold text-[#004225] tracking-wider uppercase font-montserrat">PREMIUM 01 • PUNGMU STATION DEVELOPMENT</span>
+              <span class="badge-gold px-2.5 py-0.5 rounded text-xs font-bold">풍무역세권 개발호재</span>
+            </div>
+            <div class="visual-slot-card">
+              <img
+                src="./풍무푸루지오/리버프런트/미래가치1.png"
+                alt="풍무역세권 도시개발구역 미래가치 및 개발호재"
+                loading="lazy"
+                onerror="handleImgError(this, 'images/menu5_1.jpg', 'https://images.unsplash.com/photo-1449844908441-8829872d2607?auto=format&fit=crop&w=1600&q=85')"
+              >
+              <div class="absolute bottom-0 inset-x-0 p-6 sm:p-8 bg-gradient-to-t from-slate-950/90 via-slate-950/55 to-transparent text-white">
+                <span class="text-xs font-bold text-[#DFC8A8] tracking-widest uppercase font-montserrat">MEGA DEVELOPMENT VISION</span>
+                <h3 class="text-xl sm:text-2xl lg:text-3xl font-extrabold mt-1">김포 서부권의 새로운 중심, 풍무역세권 도시개발구역 최대 수혜</h3>
+                <p class="text-xs sm:text-sm text-slate-200 mt-1.5 max-w-3xl">
+                  대규모 주거타운 조성과 광역 철도망 확충 추진 등 굵직한 개발호재가 집중되는 핵심 입지 프리미엄을 선점합니다.
+                </p>
+              </div>
+            </div>
+          </article>
+
+          <!-- 미래가치 2: 분양가 상한제 메리트 -->
+          <article class="space-y-3">
+            <div class="flex items-center justify-between px-1">
+              <span class="text-xs font-extrabold text-[#004225] tracking-wider uppercase font-montserrat">PREMIUM 02 • PRICE CAP SYSTEM MERIT</span>
+              <span class="badge-gold px-2.5 py-0.5 rounded text-xs font-bold">분양가 상한제 메리트</span>
+            </div>
+            <div class="visual-slot-card">
+              <img
+                src="./풍무푸루지오/리버프런트/미래가치2.png"
+                alt="풍무푸르지오 리버프론트 분양가 상한제 메리트"
+                loading="lazy"
+                onerror="handleImgError(this, 'images/menu5_3.jpg', 'https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=1600&q=85')"
+              >
+              <div class="absolute bottom-0 inset-x-0 p-6 sm:p-8 bg-gradient-to-t from-slate-950/90 via-slate-950/55 to-transparent text-white">
+                <span class="text-xs font-bold text-[#DFC8A8] tracking-widest uppercase font-montserrat">REASONABLE INVESTMENT VALUE</span>
+                <h3 class="text-xl sm:text-2xl lg:text-3xl font-extrabold mt-1">합리적인 내 집 마련의 기회, 분양가 상한제 적용 메리트</h3>
+                <p class="text-xs sm:text-sm text-slate-200 mt-1.5 max-w-3xl">
+                  주변 시세 대비 경쟁력 있는 분양가 책정으로 실수요자의 초기 자금 부담을 낮추고 향후 높은 미래가치 상승을 기대할 수 있습니다.
+                </p>
+              </div>
+            </div>
+          </article>
+
+          <!-- 미래가치 3: 스마트홈 IoT -->
+          <article class="space-y-3">
+            <div class="flex items-center justify-between px-1">
+              <span class="text-xs font-extrabold text-[#004225] tracking-wider uppercase font-montserrat">PREMIUM 03 • PRUGIO SMART HOME IoT</span>
+              <span class="badge-gold px-2.5 py-0.5 rounded text-xs font-bold">스마트홈 IoT</span>
+            </div>
+            <div class="visual-slot-card">
+              <img
+                src="./풍무푸루지오/리버프런트/미래가치3.png"
+                alt="풍무푸르지오 리버프론트 최첨단 스마트홈 IoT 시스템"
+                loading="lazy"
+                onerror="handleImgError(this, 'images/menu5_2.jpg', 'https://images.unsplash.com/photo-1558002038-1055907df827?auto=format&fit=crop&w=1600&q=85')"
+              >
+              <div class="absolute bottom-0 inset-x-0 p-6 sm:p-8 bg-gradient-to-t from-slate-950/90 via-slate-950/55 to-transparent text-white">
+                <span class="text-xs font-bold text-[#DFC8A8] tracking-widest uppercase font-montserrat">INTELLIGENT LIVING SYSTEM</span>
+                <h3 class="text-xl sm:text-2xl lg:text-3xl font-extrabold mt-1">일상의 편리함과 보안을 완성하는 푸르지오 스마트홈 IoT</h3>
+                <p class="text-xs sm:text-sm text-slate-200 mt-1.5 max-w-3xl">
+                  원패스 시스템, 지능형 조명·난방·환기 제어, 무인택배 및 고화질 CCTV 보안 설계로 한발 앞선 첨단 라이프를 구현합니다.
+                </p>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         8. 최하단 풀와이드 파노라마 섹션
+         - 푸터 바로 위에 화면 전체 가로폭을 시원하게 채우는 풀스크린 와이드 이미지 2장 연속 배치
+         - 이미지 경로: ./풍무푸루지오/리버프런트/하단와이드1.png, 하단와이드2.png
+    ======================================================================== -->
+    <section aria-label="풍무푸르지오 리버프론트 풀와이드 파노라마 갤러리" class="w-full overflow-hidden">
+      
+      <!-- 풀스크린 와이드 이미지 1 -->
+      <div class="panorama-slot group border-t border-[#C5A880]/30">
+        <img
+          src="./풍무푸루지오/리버프런트/하단와이드1.png"
+          alt="풍무푸르지오 리버프론트 하단 풀와이드 파노라마 뷰 1"
+          loading="lazy"
+          onerror="handleImgError(this, 'images/panoramic_1.jpg', 'https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=2000&q=85')"
+        >
+        <div class="absolute inset-0 bg-gradient-to-t from-slate-950/85 via-slate-950/25 to-transparent flex items-end">
+          <div class="max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8 py-10 sm:py-14 text-white">
+            <span class="inline-block px-3 py-1 rounded bg-[#004225]/90 border border-[#C5A880]/50 text-[#DFC8A8] text-xs font-bold tracking-widest uppercase font-montserrat">
+              PANORAMA VIEW 01 • SUNSET RIVERFRONT
+            </span>
+            <h3 class="text-2xl sm:text-4xl lg:text-5xl font-black mt-3 tracking-tight">
+              수변의 여유와 도시의 비전이 만나는 곳
+            </h3>
+            <p class="text-sm sm:text-base text-slate-200 mt-2 max-w-2xl">
+              탁 트인 파노라마 스카이라인과 함께 풍무푸르지오 리버프론트만의 고품격 일상이 시작됩니다.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 풀스크린 와이드 이미지 2 -->
+      <div class="panorama-slot group border-t border-white/15">
+        <img
+          src="./풍무푸루지오/리버프런트/하단와이드2.png"
+          alt="풍무푸르지오 리버프론트 하단 풀와이드 파노라마 뷰 2"
+          loading="lazy"
+          onerror="handleImgError(this, 'images/panoramic_2.jpg', 'https://images.unsplash.com/photo-1512915922686-57c11dde9b6b?auto=format&fit=crop&w=2000&q=85')"
+        >
+        <div class="absolute inset-0 bg-gradient-to-t from-slate-950/85 via-slate-950/25 to-transparent flex items-end">
+          <div class="max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8 py-10 sm:py-14 text-white flex flex-col md:flex-row md:items-end justify-between gap-6">
+            <div>
+              <span class="inline-block px-3 py-1 rounded bg-[#C5A880] text-[#0F172A] text-xs font-extrabold tracking-widest uppercase font-montserrat">
+                PANORAMA VIEW 02 • TIMELESS LANDMARK
+              </span>
+              <h3 class="text-2xl sm:text-4xl lg:text-5xl font-black mt-3 tracking-tight">
+                풍무의 자부심이 될 단 하나의 이름, 푸르지오
+              </h3>
+              <p class="text-sm sm:text-base text-slate-200 mt-2 max-w-2xl">
+                지금 관심고객 등록을 통해 모델하우스 방문예약과 로얄 동·호수 상담 혜택을 경험해 보세요.
+              </p>
+            </div>
+            <div class="flex-shrink-0">
+              <button type="button" data-open-modal="modal-register" class="bg-gold-gradient text-[#0F172A] font-extrabold px-7 py-4 rounded-xl text-sm sm:text-base shadow-2xl flex items-center gap-2">
+                <span>모델하우스 방문예약 신청</span>
+                <i data-lucide="arrow-up-right" class="w-5 h-5"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- =========================================================================
+       9. FOOTER (딥 차콜 블랙 60% 톤 #2C2C2C)
+       - 상호명: 넥스트벤처스 | 대표전화: 1555-0828 | 사업자등록번호: 380-88-02081
+       - 현장 위치: 경기도 김포시 풍무역세권 도시개발구역 일원
+       - 법적 고지 문구 및 저작권 표시
+  ========================================================================== -->
+  <footer class="footer-charcoal border-t border-white/10 py-14">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+      
+      <div class="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6 pb-8 border-b border-white/10">
+        <!-- 좌측 브랜드 로고 -->
+        <div class="flex items-center gap-3">
+          <div class="w-11 h-11 rounded-full bg-white/95 flex items-center justify-center p-1.5 shadow-md border border-[#C5A880]/60 overflow-hidden">
+            <img src="images/logos.png" alt="푸르지오 심볼 로고" class="w-full h-full object-contain">
+          </div>
+          <div>
+            <span class="block text-lg font-extrabold text-white tracking-tight">풍무푸르지오 리버프론트</span>
+            <span class="block text-xs text-[#DFC8A8] font-montserrat tracking-widest">OFFICIAL LANDING PAGE</span>
+          </div>
+        </div>
+
+        <!-- 우측 대표번호 및 빠른 메뉴 -->
+        <div class="flex flex-wrap items-center gap-4 sm:gap-6">
+          <div class="flex items-center gap-2.5">
+            <span class="text-xs text-gray-400">분양문의 대표전화</span>
+            <a href="tel:1555-0828" class="text-2xl font-black text-[#C5A880] font-montserrat hover:underline">1555-0828</a>
+          </div>
+          <button type="button" data-open-modal="modal-register" class="px-4 py-2 rounded-lg bg-white/10 hover:bg-white/20 text-white text-xs font-bold border border-white/15 transition-colors">
+            관심고객등록
+          </button>
+        </div>
+      </div>
+
+      <!-- 사업자 및 현장 정보 -->
+      <div class="space-y-2 text-xs sm:text-sm text-gray-300 leading-relaxed">
+        <p class="flex flex-wrap items-center gap-x-3 gap-y-1 font-medium text-white">
+          <span><strong>상호명:</strong> 넥스트벤처스</span>
+          <span class="text-gray-500">|</span>
+          <span><strong>대표전화:</strong> <a href="tel:1555-0828" class="text-[#DFC8A8] hover:underline">1555-0828</a></span>
+          <span class="text-gray-500">|</span>
+          <span><strong>사업자등록번호:</strong> 380-88-02081</span>
+        </p>
+        <p class="text-gray-300">
+          <strong>현장 위치:</strong> 경기도 김포시 풍무역세권 도시개발구역 일원
+        </p>
+      </div>
+
+      <!-- 법적 고지 문구 및 저작권 표시 -->
+      <div class="pt-4 border-t border-white/10 space-y-2 text-[11px] sm:text-xs text-gray-400 leading-relaxed">
+        <p>
+          ※ 본 웹사이트에 사용된 CG, 일러스트, 투시도, 조감도, 평면도 및 문구 등은 소비자의 이해를 돕기 위해 제작된 것으로 실제 시공 및 인허가 과정에서 변경될 수 있습니다.
+        </p>
+        <p>
+          ※ 각종 개발계획 및 교통망, 교육시설 등에 관한 사항은 추후 관계기관의 사정에 따라 변경 및 취소, 지연될 수 있으며 이는 당사와 무관합니다.
+        </p>
+        <p class="pt-2 text-gray-400 font-montserrat">
+          COPYRIGHT © 2026 PUNGMU PRUGIO RIVERFRONT & NEXT VENTURES. ALL RIGHTS RESERVED.
+        </p>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- =========================================================================
+       PC 우측 플로팅 퀵 버튼 (데스크톱 전용)
+  ========================================================================== -->
+  <div class="hidden md:flex fixed bottom-8 right-8 z-30 flex-col gap-3">
+    <a href="tel:1555-0828" class="group flex items-center gap-2.5 bg-[#004225] hover:bg-[#002E19] text-white px-4 py-3 rounded-full shadow-2xl border border-[#C5A880]/50 transition-all hover:-translate-y-0.5">
+      <div class="w-8 h-8 rounded-full bg-[#C5A880] text-[#0F172A] flex items-center justify-center">
+        <i data-lucide="phone-call" class="w-4 h-4"></i>
+      </div>
+      <div class="pr-1">
+        <span class="block text-[10px] text-[#DFC8A8] leading-none">대표번호 전화상담</span>
+        <span class="block text-sm font-black font-montserrat leading-tight">1555-0828</span>
+      </div>
+    </a>
+
+    <button type="button" data-open-modal="modal-register" class="flex items-center gap-2.5 bg-gold-gradient text-[#0F172A] px-4 py-3 rounded-full shadow-2xl font-extrabold text-sm transition-all hover:-translate-y-0.5">
+      <div class="w-8 h-8 rounded-full bg-[#004225] text-[#C5A880] flex items-center justify-center">
+        <i data-lucide="edit-3" class="w-4 h-4"></i>
+      </div>
+      <span class="pr-1">관심고객 등록</span>
+    </button>
+  </div>
+
+  <!-- =========================================================================
+       모바일 하단 2분할 플로팅 고정 바 (Essential Mobile UX)
+       - 좌측: '전화 상담 (1555-0828)' (터치 시 통화 다이얼 연동)
+       - 우측: '관심고객 등록' (터치 시 모달 오픈)
+  ========================================================================== -->
+  <div class="md:hidden fixed bottom-0 inset-x-0 z-40 grid grid-cols-2 h-16 shadow-[0_-8px_25px_rgba(0,0,0,0.25)] border-t border-[#C5A880]/40">
+    <a href="tel:1555-0828" class="bg-[#004225] active:bg-[#002E19] text-white font-extrabold text-sm flex items-center justify-center gap-2 px-2">
+      <i data-lucide="phone-call" class="w-4 h-4 text-[#C5A880] flex-shrink-0"></i>
+      <span>전화 상담 (1555-0828)</span>
+    </a>
+    <button type="button" data-open-modal="modal-register" class="bg-gold-gradient active:opacity-90 text-[#0F172A] font-extrabold text-sm flex items-center justify-center gap-2 px-2">
+      <i data-lucide="user-check" class="w-4 h-4 flex-shrink-0"></i>
+      <span>관심고객 등록</span>
+    </button>
+  </div>
+
+  <!-- =========================================================================
+       관심고객 등록 팝업 모달 (DB 수집)
+       - 성함, 휴대폰 번호, 희망 평형(84/106/122/180) 입력 폼 및 개인정보 처리방침 동의 체크박스
+  ========================================================================== -->
+  <div id="modal-register" class="modal-container hidden fixed inset-0 z-50 flex items-center justify-center p-4 modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="modal-register-title">
+    <div class="bg-white rounded-2xl max-w-md w-full overflow-hidden shadow-2xl border border-[#C5A880]/50 relative">
+      
+      <!-- 모달 상단 헤더 (브리티시 그린) -->
+      <div class="bg-[#004225] px-6 py-5 text-white relative">
+        <button type="button" data-close-modal class="absolute top-4 right-4 text-white/75 hover:text-white p-1" aria-label="모달 닫기">
+          <i data-lucide="x" class="w-6 h-6"></i>
+        </button>
+        <span class="text-[11px] font-bold text-[#DFC8A8] tracking-widest uppercase font-montserrat block">
+          VIP CUSTOMER REGISTRATION
+        </span>
+        <h3 id="modal-register-title" class="text-xl font-extrabold mt-0.5">
+          풍무푸르지오 리버프론트 관심고객등록
+        </h3>
+        <p class="text-xs text-white/80 mt-1">
+          모델하우스 방문예약 및 분양가·일정 안내를 신속히 도와드립니다.
+        </p>
+      </div>
+
+      <!-- 모달 입력 폼 -->
+      <form class="register-form p-6 space-y-4">
+        <div>
+          <label for="modal-name" class="block text-xs font-bold text-[#1F2937] mb-1">성함 <span class="text-red-600">*</span></label>
+          <input id="modal-name" name="name" type="text" required placeholder="성함을 입력해 주세요" class="w-full px-4 py-2.5 text-sm rounded-lg border border-slate-300 focus:ring-2 focus:ring-[#004225] focus:border-[#004225] outline-none">
+        </div>
+
+        <div>
+          <label for="modal-phone" class="block text-xs font-bold text-[#1F2937] mb-1">휴대폰 번호 <span class="text-red-600">*</span></label>
+          <input id="modal-phone" name="phone" type="tel" required placeholder="010-0000-0000" class="w-full px-4 py-2.5 text-sm rounded-lg border border-slate-300 focus:ring-2 focus:ring-[#004225] focus:border-[#004225] outline-none">
+        </div>
+
+        <div>
+          <label for="modal-unit" class="block text-xs font-bold text-[#1F2937] mb-1">희망 평형 (84 / 106 / 122 / 180) <span class="text-red-600">*</span></label>
+          <select id="modal-unit" name="type" required class="w-full px-4 py-2.5 text-sm rounded-lg border border-slate-300 focus:ring-2 focus:ring-[#004225] focus:border-[#004225] outline-none bg-white">
+            <option value="84" selected>84㎡ (84A · 84B · 84C · 84D · 84E · 84F)</option>
+            <option value="106">106㎡ (106A · 106B)</option>
+            <option value="122">122㎡ (122 타입)</option>
+            <option value="180">180㎡ (180A · 180B1 · 180C)</option>
+          </select>
+        </div>
+
+        <div class="bg-[#F5F2EB] p-3.5 rounded-lg border border-[#E5DEC9] space-y-2">
+          <div class="flex items-start gap-2">
+            <input type="checkbox" id="modal-privacy-chk" name="privacy" value="동의" required class="mt-0.5 w-4 h-4 rounded accent-[#004225]">
+            <label for="modal-privacy-chk" class="text-xs font-semibold text-[#1F2937] leading-snug">
+              [필수] 개인정보 처리방침 및 수집·이용에 동의합니다.
+            </label>
+          </div>
+          <p class="text-[11px] text-slate-500 leading-relaxed pl-6">
+            수집항목: 성함, 휴대폰번호, 희망평형 | 이용목적: 분양정보 안내 및 모델하우스 방문예약 상담 | 보유기간: 분양 종료 시까지
+          </p>
+        </div>
+
+        <button type="submit" class="w-full py-3.5 bg-gold-gradient text-[#0F172A] font-extrabold rounded-xl text-sm shadow-lg transition-all flex items-center justify-center gap-2">
+          <i data-lucide="send" class="w-4 h-4"></i>
+          <span>관심고객 등록 완료하기</span>
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- =========================================================================
+       개인정보 처리방침 상세 모달
+  ========================================================================== -->
+  <div id="modal-privacy" class="modal-container hidden fixed inset-0 z-50 flex items-center justify-center p-4 modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="modal-privacy-title">
+    <div class="bg-white rounded-2xl max-w-lg w-full p-6 shadow-2xl relative border border-slate-200">
+      <button type="button" data-close-modal class="absolute top-4 right-4 text-slate-400 hover:text-slate-700" aria-label="모달 닫기">
+        <i data-lucide="x" class="w-6 h-6"></i>
+      </button>
+
+      <h3 id="modal-privacy-title" class="text-lg font-extrabold text-[#1F2937] mb-3">개인정보 처리방침 및 수집·이용 동의</h3>
+      <div class="text-xs text-slate-600 space-y-2.5 max-h-64 overflow-y-auto p-4 bg-slate-50 rounded-xl border border-slate-200 leading-relaxed">
+        <p><strong>1. 개인정보의 수집 및 이용 목적</strong><br>풍무푸르지오 리버프론트 분양 정보 안내, 모델하우스 방문 예약, 전화/문자 상담 서비스 제공</p>
+        <p><strong>2. 수집하는 개인정보 항목</strong><br>필수항목: 성함, 휴대폰 번호, 희망 평형(84/106/122/180)</p>
+        <p><strong>3. 개인정보의 보유 및 이용 기간</strong><br>분양 완료 및 상담 목적 달성 시까지 보유하며, 정보주체의 삭제 요청 시 지체 없이 파기합니다.</p>
+        <p><strong>4. 동의 거부 권리 안내</strong><br>고객님은 개인정보 수집 및 이용 동의를 거부할 권리가 있으나, 미동의 시 관심고객 등록 및 방문예약 서비스 이용이 제한될 수 있습니다.</p>
+      </div>
+      <div class="mt-4 text-right">
+        <button type="button" data-close-modal class="px-5 py-2.5 bg-[#004225] text-white rounded-lg text-xs font-bold">확인</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Application Script -->
+  <script src="app.js"></script>
+
+  <!-- =========================================================================
+       Google Sheets (구글 스프레드시트) 관심고객 등록 및 방문예약 자동 전송 스크립트
+  ========================================================================== -->
+  <script>
+    // =======================================================================
+    // [설정] 여기에 Google Apps Script Web App URL을 입력해 주세요.
+    // 배포 완료 후 발급받은 웹 앱 URL(https://script.google.com/macros/s/.../exec)을
+    // 아래 'YOUR_GOOGLE_APPS_SCRIPT_URL' 대신 넣어주시면 구글 시트로 자동 전송됩니다.
+    // =======================================================================
+    const scriptURL = 'YOUR_GOOGLE_APPS_SCRIPT_URL';
+
+    document.addEventListener('DOMContentLoaded', () => {
+      const registerForms = document.querySelectorAll('.register-form');
+
+      registerForms.forEach(form => {
+        form.addEventListener('submit', function (e) {
+          e.preventDefault();
+
+          // 1. 폼 데이터(FormData) 수집
+          const formData = new FormData(form);
+
+          // 구글 시트1 전용 한글 컬럼(성함, 휴대폰번호, 희망평형선택) 1:1 매핑
+          const nameVal = form.querySelector('input[name="name"]')?.value.trim() || '';
+          const phoneVal = form.querySelector('input[name="phone"]')?.value.trim() || '';
+          const typeSelect = form.querySelector('select[name="type"]') || form.querySelector('select');
+          const typeVal = (typeSelect && typeSelect.selectedIndex >= 0) ? typeSelect.options[typeSelect.selectedIndex].text : (typeSelect?.value || '');
+
+          formData.set('성함', nameVal);
+          formData.set('휴대폰번호', phoneVal);
+          formData.set('희망평형선택', typeVal);
+          formData.set('name', nameVal);
+          formData.set('phone', phoneVal);
+          formData.set('type', typeVal);
+
+          // 2. 전송 버튼 상태 변경 (중복 클릭 및 중복 전송 방지)
+          const submitButton = form.querySelector('button[type="submit"]');
+          const originalButtonText = submitButton ? submitButton.innerHTML : '';
+          if (submitButton) {
+            submitButton.disabled = true;
+            submitButton.style.opacity = '0.7';
+            submitButton.innerHTML = '<span>접수 중입니다...</span>';
+          }
+
+          // 3. scriptURL 설정 여부 확인
+          if (scriptURL === 'YOUR_GOOGLE_APPS_SCRIPT_URL' || !scriptURL.startsWith('http')) {
+            console.warn('[Google Sheets] scriptURL이 아직 기본값입니다. 실제 배포된 Google Apps Script Web App URL로 교체해 주세요.');
+
+            setTimeout(() => {
+              alert('관심고객 등록 및 방문예약이 완료되었습니다.\n(※ Google Apps Script Web App URL을 연결하시면 구글 스프레드시트로 자동 저장됩니다.)');
+              form.reset();
+
+              if (submitButton) {
+                submitButton.disabled = false;
+                submitButton.style.opacity = '';
+                submitButton.innerHTML = originalButtonText;
+              }
+
+              const parentModal = form.closest('.modal-container');
+              if (parentModal) {
+                parentModal.classList.add('hidden');
+                document.body.style.overflow = '';
+              }
+            }, 500);
+            return;
+          }
+
+          // 4. fetch API(POST 방식)를 사용한 Google Sheets 전송
+          fetch(scriptURL, {
+            method: 'POST',
+            body: formData
+          })
+            .then(response => {
+              alert('관심고객 등록 및 방문예약이 완료되었습니다.');
+              form.reset();
+
+              // 모달창 내부의 폼인 경우 모달 닫기
+              const parentModal = form.closest('.modal-container');
+              if (parentModal) {
+                parentModal.classList.add('hidden');
+                document.body.style.overflow = '';
+              }
+            })
+            .catch(error => {
+              console.error('Error!', error.message);
+              alert('관심고객 등록 중 오류가 발생했습니다. 잠시 후 다시 시도해 주시거나 대표번호(1555-0828)로 문의해 주세요.');
+            })
+            .finally(() => {
+              if (submitButton) {
+                submitButton.disabled = false;
+                submitButton.style.opacity = '';
+                submitButton.innerHTML = originalButtonText;
+              }
+            });
+        });
+      });
+    });
+  </script>
+</body>
+</html>
